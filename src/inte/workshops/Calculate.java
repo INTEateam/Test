@@ -13,8 +13,7 @@ public class Calculate {
         // ( 2(4)^t ) * 55 =
         // (STARTING_AMOUNT(GROWTH_RATE)^years)
         BigInteger expPart = GROWTH_RATE.pow(year);
-        BigInteger amount = STARTING_AMOUNT.multiply(expPart);
-        return amount;
+        return STARTING_AMOUNT.multiply(expPart);
     }
 
     public static BigInteger getWeightOfHamsters(BigInteger hamsters) {
