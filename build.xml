@@ -27,8 +27,7 @@
     <junit printsummary="yes" dir="build/test" fork="true">
         <classpath>
             <pathelement location="build/test" />
-			<pathelement location="lib/junit.jar"/>
-        </classpath>
+		</classpath>
         <test name="test.inte.workshops.TestAll" haltonfailure="no" outfile="result">
             <formatter type="xml" />
         </test>
