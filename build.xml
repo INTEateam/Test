@@ -9,7 +9,7 @@
         <javac srcdir="src" destdir="build/classes"/>
     </target>
 
-    <target name="jar">
+    <target name="jar" depends="compile,clean">
         <mkdir dir="build/jar"/>
         <jar destfile="build/jar/Test.jar" basedir="build/classes">
             <manifest>
