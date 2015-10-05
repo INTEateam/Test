@@ -18,4 +18,20 @@
         </jar>
     </target>
 	
+	<target name="compileTest">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src/test" destdir="build/classes"/>
+    </target>
+	
+	<target name="runTests" description="Run JUnit tests" depends="compileTest">
+    <junit printsummary="yes" dir="build/test" fork="true">
+        <classpath>
+            <pathelement location="build/test" />
+        </classpath>
+        <test name="test.inte.workshops.TestAll" haltonfailure="no" outfile="result">
+            <formatter type="xml" />
+        </test>
+    </junit>
+	</target>
+	
 </project>
