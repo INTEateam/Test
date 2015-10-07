@@ -2,6 +2,7 @@ package test.inte.workshops;
 
 import inte.workshops.Calculate;
 import inte.workshops.Earth;
+import inte.workshops.Hamster;
 import org.junit.Test;
 
 import java.math.BigInteger;
@@ -49,12 +50,12 @@ public class TestAll {
     }
 
 	    @Test
-    public void testGetWeight() throws Exception {
+    public void testGetWeightEarth() throws Exception {
         assertEquals(Earth.getWeight(), EARTH_WEIGHT);
     }
 
     @Test
-    public void testGetWeight() {
+    public void testGetWeightHamster() {
         assertEquals(Hamster.getWeight(), HAMSTER_WEIGHT);
     }
 	
