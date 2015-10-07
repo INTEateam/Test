@@ -10,7 +10,7 @@ import java.math.BigInteger;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by Nicklas on 2015-09-06.
+ * Created by Nicklas on 2015-10-07.
  */
 public class TestAll {
 	private final static BigInteger HAMSTER_WEIGHT_AT_YEAR_1 = new BigInteger("440");
