@@ -26,7 +26,8 @@
 	<target name="runTests" description="Run JUnit tests" depends="compileTest">
     <junit printsummary="yes" dir="build/classes" fork="true">
         <classpath>
-            <pathelement location="build/classes" />
+            <pathelement location="junit-4.12.jar" />
+			<pathelement location="hamcrest-core-1.3.jar" />
 		</classpath>
         <test name="test.inte.workshops.TestAll" haltonfailure="no" outfile="result">
             <formatter type="xml" />
