@@ -18,7 +18,7 @@
 		</jar>
 	</target>
 
-	<target name="compileTest">
+	<target name="compileTest" depends="compile">
 		<javac srcdir="src/test" destdir="build/classes">
 			<classpath>
 				<pathelement location="junit-4.12.jar" />
@@ -32,7 +32,7 @@
 	</taskdef>
 
 
-	<target name="runTests" description="Run JUnit tests" depends="compileTest,compile" >
+	<target name="runTests" description="Run JUnit tests" depends="compileTest" >
 		<jacoco:coverage destfile="remote.exec">
 			<junit printsummary="yes" dir="build/classes" fork="true">
 				<classpath>
@@ -47,5 +47,28 @@
 		</jacoco:coverage>
 	</target>
 
-
+	<target name="report" depends="runTests">
+		<!--  Step 3: Create coverage report  -->
+		<jacoco:report>
+			<!--
+			 This task needs the collected execution data and ... 
+			-->
+			<executiondata>
+				<file file="remote.exec"/>
+			</executiondata>
+			<!--  the class files and optional source files ...  -->
+			<structure name="JaCoCo Ant Example">
+				<classfiles>
+					<fileset dir="$build/classes"/>
+				</classfiles>
+				<sourcefiles encoding="UTF-8">
+					<fileset dir="build/classes"/>
+				</sourcefiles>
+			</structure>
+			<!--  to produce reports in different formats.  -->
+			<html destdir="reportJacoco/"/>
+			<csv destfile="reportJacoco/reportJacoco.csv"/>
+			<xml destfile="reportJacoco/reportJacoco.xml"/>
+		</jacoco:report>
+	</target>
 </project>
