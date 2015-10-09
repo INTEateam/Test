@@ -16,7 +16,7 @@
 	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
 	<property name="findbugs.home" value="findbugs" />
 
-	<target name="findbugs" depends="compile">
+	<target name="findbugs">
 		<findbugs home="${findbugs.home}"
               output="xml"
               outputFile="findbugs.xml" >
