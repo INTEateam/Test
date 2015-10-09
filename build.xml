@@ -19,7 +19,8 @@
 	<target name="findbugs">
 		<findbugs home="${findbugs.home}"
               output="xml"
-              outputFile="findbugs.xml" >
+              outputFile="findbugs.xml" 
+			  reportLevel="low">
 			<sourcePath path="src/inte" />
 			<class location="build/classes/" />
 		</findbugs>
