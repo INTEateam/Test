@@ -32,7 +32,7 @@
 	</taskdef>
 
 
-	<target name="runTests" description="Run JUnit tests" depends="compileTest">
+	<target name="runTests" description="Run JUnit tests" depends="compileTest,compile" >
 		<jacoco:coverage destfile="remote.exec">
 			<junit printsummary="yes" dir="build/classes" fork="true">
 				<classpath>
