@@ -1,4 +1,4 @@
-<project>
+<project name="test" xmlns:jacoco="antlib:org.jacoco.ant">
 
     <target name="clean">
         <delete dir="build"/>
