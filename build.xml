@@ -22,7 +22,7 @@
               outputFile="findbugs.xml" 
 			  reportLevel="low">
 			<sourcePath path="src/inte" />
-			<class location="build/classes/" />
+			<class location="build/classes/inte" />
 		</findbugs>
 	</target>
 
