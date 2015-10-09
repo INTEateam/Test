@@ -1,5 +1,9 @@
 <project name="test" xmlns:jacoco="antlib:org.jacoco.ant">
 
+	<presetdef name="javac">
+		<javac includeantruntime="false" />
+	</presetdef>
+
 	<target name="clean">
 		<delete dir="build"/>
 	</target>
@@ -67,8 +71,8 @@
 			</structure>
 			<!--  to produce reports in different formats.  -->
 			<html destdir="reportJacoco/"/>
-			<csv destfile="reportJacoco/reportJacoco.csv"/>
-			<xml destfile="reportJacoco/reportJacoco.xml"/>
+			<!--<csv destfile="reportJacoco/reportJacoco.csv"/>
+			<xml destfile="reportJacoco/reportJacoco.xml"/>-->
 		</jacoco:report>
 	</target>
 </project>
