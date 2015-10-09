@@ -59,7 +59,7 @@
 			<!--  the class files and optional source files ...  -->
 			<structure name="JaCoCo Ant Example">
 				<classfiles>
-					<fileset dir="$build/classes"/>
+					<fileset dir="build/classes"/>
 				</classfiles>
 				<sourcefiles encoding="UTF-8">
 					<fileset dir="build/classes"/>
