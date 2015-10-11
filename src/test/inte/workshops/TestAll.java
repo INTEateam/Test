@@ -59,9 +59,12 @@ public class TestAll {
         assertEquals(Hamster.getWeight(), HAMSTER_WEIGHT);
     }
 	
+<<<<<<< HEAD
 	@Test
     public void testMain() {
         main(null);
     }
 
+=======
+>>>>>>> parent of 32479cb... testa main
 }
