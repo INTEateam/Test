@@ -61,7 +61,7 @@ public class TestAll {
 	
 	@Test
     public void testMain() {
-        Main.main(null);
+        main(null);
     }
 
 }
