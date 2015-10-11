@@ -16,14 +16,14 @@
 	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
 	<property name="findbugs.home" value="findbugs" />
 
-	<target name="findbugs">
+	<target name="findbugs" depends="jar">
 		<findbugs home="${findbugs.home}"
               output="xml:withMessages"
               outputFile="findbugs.xml"
 			  effort="max"
 			  reportLevel="low">
 			<sourcePath path="src/inte/workshops" />
-			<class location="build/classes/inte/workshops" />
+			<class location="build/jar/Test.jar" />
 		</findbugs>
 	</target>
 
