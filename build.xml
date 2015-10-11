@@ -12,6 +12,20 @@
 		<mkdir dir="build/classes"/>
 		<javac srcdir="src/inte" destdir="build/classes"/>
 	</target>
+	
+	<target name="jar" depends="compile">
+		<mkdir dir="build/jar"/>
+		<jar destfile="build/jar/Test.jar">
+			<fileset dir="build/classes" />
+			<fileset dir="src" includes="**/*.java"/>
+			<manifest>
+				<attribute name="Main-Class" value="inte.workshops.Main"/>
+			</manifest>
+		</jar>
+	</target>
+	
+	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
+         classpath="checkstyle-6.11.2-all.jar"/>
 
 	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
 	<property name="findbugs.home" value="findbugs" />
@@ -25,16 +39,7 @@
 			<sourcePath path="src/inte/workshops" />
 			<class location="build/jar/Test.jar" />
 		</findbugs>
-	</target>
-
-	<target name="jar" depends="compile">
-		<mkdir dir="build/jar"/>
-		<jar destfile="build/jar/Test.jar" basedir="build/classes">
-			<manifest>
-				<attribute name="Main-Class" value="inte.workshops.Main"/>
-			</manifest>
-		</jar>
-	</target>
+	</target>	
 
 	<target name="compileTest" depends="compile">
 		<javac srcdir="src/test" destdir="build/classes">
