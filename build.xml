@@ -22,8 +22,8 @@
               outputFile="findbugs.xml"
 			  effort="max"
 			  reportLevel="low">
-			<sourcePath path="src/inte" />
-			<class location="build/classes/inte" />
+			<sourcePath path="src/inte/workshops" />
+			<class location="build/classes/inte/workshops" />
 		</findbugs>
 	</target>
 
