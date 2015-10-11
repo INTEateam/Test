@@ -59,4 +59,9 @@ public class TestAll {
         assertEquals(Hamster.getWeight(), HAMSTER_WEIGHT);
     }
 	
+	@Test
+    public void testMain() {
+        Main.main(null);
+    }
+
 }
